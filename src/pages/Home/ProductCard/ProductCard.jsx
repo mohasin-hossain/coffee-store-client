@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ProductCard = ({ product }) => {
@@ -15,7 +16,6 @@ const ProductCard = ({ product }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-
         fetch(`http://localhost:3000/coffee/${id}`, {
           method: "DELETE",
         })
@@ -29,10 +29,11 @@ const ProductCard = ({ product }) => {
               });
             }
           });
-          
       }
     });
   };
+
+//   const handleUpdate = (id) => {};
 
   return (
     <div>
@@ -51,7 +52,14 @@ const ProductCard = ({ product }) => {
           </div>
           <div className="join join-vertical space-y-4">
             <button className="btn btn-primary join-item">View</button>
-            <button className="btn btn-accent join-item">Update</button>
+            <Link to={`/updateCoffee/${_id}`}>
+              <button
+                // onClick={() => handleUpdate(_id)}
+                className="btn btn-accent join-item"
+              >
+                Update
+              </button>
+            </Link>
             <button
               onClick={() => handleDelete(_id)}
               className="btn btn-secondary join-item"
