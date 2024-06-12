@@ -17,7 +17,7 @@ const Users = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/users/${id}`, {
+        fetch(`https://coffee-store-server-elksww2x2-md-mohasin-hossains-projects.vercel.app/users/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -47,6 +47,7 @@ const Users = () => {
               <th></th>
               <th>Email</th>
               <th>Created At</th>
+              <th>Last Logged At</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -56,6 +57,7 @@ const Users = () => {
                 <th>1</th>
                 <td>{user.email}</td>
                 <td>{user.createdAt}</td>
+                <td>{user.lastLoggedAt}</td>
                 <td>
                   <button
                     onClick={() => handleDelete(user._id)}

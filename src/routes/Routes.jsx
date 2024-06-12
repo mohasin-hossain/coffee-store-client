@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../layout/Root/Root";
-import Home from "../pages/Home/Home";
 import AddCoffee from "../pages/AddCoffee/AddCoffee";
-import UpdateCoffee from "../pages/UpdateCoffee/UpdateCoffee";
+import Home from "../pages/Home/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import UpdateCoffee from "../pages/UpdateCoffee/UpdateCoffee";
 import Users from "../pages/Users/Users";
 
 const routes = createBrowserRouter([
@@ -24,12 +24,12 @@ const routes = createBrowserRouter([
         path: "/updateCoffee/:id",
         element: <UpdateCoffee></UpdateCoffee>,
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/coffee/${params.id}`),
+          fetch(`https://coffee-store-server-elksww2x2-md-mohasin-hossains-projects.vercel.app/coffee/${params.id}`),
       },
       {
         path: "/users",
         element: <Users></Users>,
-        loader: () => fetch("http://localhost:3000/users"),
+        loader: () => fetch("https://coffee-store-server-elksww2x2-md-mohasin-hossains-projects.vercel.app/users"),
       },
       {
         path: "/login",

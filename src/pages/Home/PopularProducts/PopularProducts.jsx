@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import ProductCard from "../ProductCard/ProductCard";
 import Swal from "sweetalert2";
+import ProductCard from "../ProductCard/ProductCard";
 
 const PopularProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/coffee")
+    fetch("https://coffee-store-server-elksww2x2-md-mohasin-hossains-projects.vercel.app/coffee")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -22,13 +22,13 @@ const PopularProducts = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/coffee/${id}`, {
+        fetch(`https://coffee-store-server-elksww2x2-md-mohasin-hossains-projects.vercel.app/coffee/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
-                
+
               const remaining = products.filter(
                 (product) => product._id !== id
               );
