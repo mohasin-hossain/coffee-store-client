@@ -1,6 +1,10 @@
+import { IoMdArrowRoundBack } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const AddCoffee = () => {
+  const navigate = useNavigate();
+
   const handleAddCoffee = (e) => {
     e.preventDefault();
 
@@ -44,10 +48,31 @@ const AddCoffee = () => {
       });
   };
 
+  const handleGoBack = () => {
+    navigate(-1);
+  };
+
   return (
-    <div className="container mx-auto my-10 px-10">
-      <h1 className="text-4xl font-extrabold text-center">Add a Coffee</h1>
-      <form onSubmit={handleAddCoffee} className="card-body">
+    <div className="container mx-auto mt-10 mb-20 px-10">
+      <button
+        style={{ textShadow: "0px 1px 8px #818181" }}
+        className="mt-20 mb-8 font-rancho text-3xl flex items-center gap-3"
+        onClick={handleGoBack}
+      >
+        <IoMdArrowRoundBack />
+        Back to Home
+      </button>
+
+      <form
+        onSubmit={handleAddCoffee}
+        className="card-body bg-quaternary mt-8 px-28 py-16"
+      >
+        <h1
+          style={{ textShadow: "0px 1px 8px #818181" }}
+          className="text-4xl font-extrabold text-center font-rancho my-6"
+        >
+          Add a Coffee
+        </h1>
         {/* Name and Chef Row */}
         <div className="md:flex gap-8 w-full">
           <div className="form-control md:w-1/2">
@@ -58,7 +83,7 @@ const AddCoffee = () => {
               type="text"
               name="name"
               placeholder="Enter Coffee Name"
-              className="input input-bordered"
+              className="input text-gray-500"
               required
             />
           </div>
@@ -70,7 +95,7 @@ const AddCoffee = () => {
               type="text"
               name="quantity"
               placeholder="Quantity"
-              className="input input-bordered"
+              className="input text-gray-500"
               required
             />
           </div>
@@ -85,7 +110,7 @@ const AddCoffee = () => {
               type="text"
               name="supplier"
               placeholder="Enter Supplier Name"
-              className="input input-bordered"
+              className="input text-gray-500"
               required
             />
           </div>
@@ -97,7 +122,7 @@ const AddCoffee = () => {
               type="text"
               name="taste"
               placeholder="Taste"
-              className="input input-bordered"
+              className="input text-gray-500"
               required
             />
           </div>
@@ -112,7 +137,7 @@ const AddCoffee = () => {
               type="text"
               name="category"
               placeholder="Category"
-              className="input input-bordered"
+              className="input text-gray-500"
               required
             />
           </div>
@@ -124,7 +149,7 @@ const AddCoffee = () => {
               type="text"
               name="details"
               placeholder="Add Details"
-              className="input input-bordered"
+              className="input text-gray-500"
               required
             />
           </div>
@@ -138,11 +163,15 @@ const AddCoffee = () => {
             type="text"
             name="photo"
             placeholder="Enter Photo URL"
-            className="input input-bordered"
+            className="input text-gray-500"
             required
           />
         </div>
-        <input type="submit" value="Add Coffee" className="btn mt-4" />
+        <input
+          type="submit"
+          value="Add Coffee"
+          className="btn btn-outline rounded-none bg-primary border-black border-2 font-rancho text-xl mt-10"
+        />
       </form>
     </div>
   );
