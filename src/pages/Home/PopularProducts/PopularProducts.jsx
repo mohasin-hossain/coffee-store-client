@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import ProductCard from "../ProductCard/ProductCard";
+import { BsCup } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const PopularProducts = () => {
   const [products, setProducts] = useState([]);
@@ -45,7 +47,7 @@ const PopularProducts = () => {
   };
 
   return (
-    <div className="container mx-auto px-10 my-20">
+    <div className="container mx-auto px-10 mt-20">
       <div>
         <p className="font-rancho text-center text-xl">-- Sip & Savor --</p>
         <h2
@@ -55,12 +57,18 @@ const PopularProducts = () => {
           Our Popular Products
         </h2>
         <div className="flex justify-center">
-        <button className="btn btn-outline content-center rounded-none bg-primary text-white font-rancho text-xl border-black border-2">
-          Add Coffee
-        </button>
+          <Link to="/addCoffee">
+            <button
+              style={{ textShadow: "0px 3px 8px #818181" }}
+              className="btn btn-outline content-center rounded-none bg-primary text-white font-rancho text-xl border-black border-2"
+            >
+              Add Coffee
+              <BsCup />
+            </button>
+          </Link>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-2 gap-8 mt-10">
           {products.map((product) => (
             <ProductCard
               key={product._id}

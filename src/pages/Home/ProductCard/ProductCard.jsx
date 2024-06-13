@@ -1,3 +1,6 @@
+import { FaPencilAlt } from "react-icons/fa";
+import { FaEye } from "react-icons/fa6";
+import { MdDeleteForever } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const ProductCard = ({ product, handleDelete }) => {
@@ -6,7 +9,34 @@ const ProductCard = ({ product, handleDelete }) => {
 
   return (
     <div>
-      <div className="card card-side bg-base-100 shadow-lg">
+      <div className="flex bg-tertiary rounded-lg p-8 justify-center items-center gap-8 font-raleway text-lg">
+        <div>
+          <img className="w-36 h-40" src={photo} alt="Coffee" />
+        </div>
+        <div className="space-y-2">
+          <p><strong>Name:</strong> {name}</p>
+          <p><strong>In Stock:</strong> {quantity}</p>
+          <p><strong>Supplier:</strong> {supplier}</p>
+        </div>
+        <div className="join join-vertical space-y-4">
+          <button className="btn btn-outline text-white rounded-md border-none bg-primary hover:bg-primary join-item">
+          <FaEye />
+          </button>
+          <Link to={`/updateCoffee/${_id}`}>
+            <button className="btn btn-outline bg-black join-item border-none text-white">
+            <FaPencilAlt />
+            </button>
+          </Link>
+          <button
+            onClick={() => handleDelete(_id)}
+            className="btn btn-outline text-white bg-red-500 hover:bg-red-500 border-none join-item"
+          >
+            <MdDeleteForever />
+          </button>
+        </div>
+      </div>
+
+      {/* <div className="card card-side bg-base-100 shadow-lg">
         <figure>
           <img src={photo} alt="Coffee" />
         </figure>
@@ -23,7 +53,6 @@ const ProductCard = ({ product, handleDelete }) => {
             <button className="btn btn-primary join-item">View</button>
             <Link to={`/updateCoffee/${_id}`}>
               <button
-                // onClick={() => handleUpdate(_id)}
                 className="btn btn-accent join-item"
               >
                 Update
@@ -37,7 +66,7 @@ const ProductCard = ({ product, handleDelete }) => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
