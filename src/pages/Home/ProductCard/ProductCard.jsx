@@ -13,7 +13,7 @@ const ProductCard = ({ product, handleDelete }) => {
         <div>
           <img className="w-36 h-40" src={photo} alt="Coffee" />
         </div>
-        <div className="space-y-2">
+        <div className="space-y-2 grow">
           <p>
             <strong>Name:</strong> {name}
           </p>
@@ -24,10 +24,14 @@ const ProductCard = ({ product, handleDelete }) => {
             <strong>Supplier:</strong> {supplier}
           </p>
         </div>
-        <div className="join join-horizontal md:join-vertical md:space-y-4">
-          <button className="btn btn-outline text-white border-none bg-primary hover:bg-primary join-item">
-            <FaEye />
-          </button>
+        <div className="join md:join-vertical md:space-y-2">
+
+          <Link to={`/coffee/${_id}`}>
+            <button className="btn btn-outline text-white border-none bg-primary hover:bg-primary join-item rounded-none">
+              <FaEye />
+            </button>
+          </Link>
+
           <Link to={`/updateCoffee/${_id}`}>
             <button className="btn btn-outline bg-black join-item border-none text-white">
               <FaPencilAlt />
@@ -35,7 +39,7 @@ const ProductCard = ({ product, handleDelete }) => {
           </Link>
           <button
             onClick={() => handleDelete(_id)}
-            className="btn btn-outline text-white bg-red-500 hover:bg-red-500 border-none join-item"
+            className="btn btn-outline text-white bg-red-500 hover:bg-red-500 border-none  rounded-none"
           >
             <MdDeleteForever />
           </button>

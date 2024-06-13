@@ -80,8 +80,16 @@ const PopularProducts = () => {
           ))}
         </div>
       </div>
-      <img className="absolute left-0 top-0" src={productListBgLeft} alt="" />
-      <img className="absolute right-0 bottom-0" src={productListBgRight} alt="" />
+      <img
+        className="absolute left-0 top-0 -z-10"
+        src={productListBgLeft}
+        alt=""
+      />
+      <img
+        className="absolute right-0 bottom-0"
+        src={productListBgRight}
+        alt=""
+      />
     </div>
   );
 };
