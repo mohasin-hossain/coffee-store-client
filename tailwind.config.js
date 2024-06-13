@@ -4,9 +4,10 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "footer-img": "url(./src/assets/more/24.jpg)",
         "header-img": "url(./src/assets/more/15.jpg)",
         "banner-img": "url(./src/assets/more/3.png)",
+        "footer-img": "url(./src/assets/more/13.jpg)",
+        "footer-copyright-img": "url(./src/assets/more/24.jpg)",
       },
       fontFamily: {
         rancho: '"Rancho", cursive;',
@@ -14,6 +15,7 @@ export default {
       },
       colors: {
         primary: "#E3B577",
+        secondary: "#331A15",
       },
     },
   },
