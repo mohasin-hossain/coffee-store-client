@@ -16,7 +16,7 @@ const Login = () => {
         const lastLoggedAt = result.user.metadata.lastSignInTime;
         const user = { email, lastLoggedAt };
 
-        fetch("https://coffee-store-server-7on2nx692-md-mohasin-hossains-projects.vercel.app/users", {
+        fetch("https://coffee-store-server-opbz37q6z-md-mohasin-hossains-projects.vercel.app/users", {
           method: "PATCH",
           headers: {
             "content-type": "application/json",

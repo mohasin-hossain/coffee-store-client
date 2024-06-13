@@ -18,7 +18,7 @@ const Users = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `https://coffee-store-server-7on2nx692-md-mohasin-hossains-projects.vercel.app/users/${id}`,
+          `https://coffee-store-server-opbz37q6z-md-mohasin-hossains-projects.vercel.app/users/${id}`,
           {
             method: "DELETE",
           }
