@@ -16,7 +16,7 @@ export default {
       colors: {
         primary: "#E3B577",
         secondary: "#331A15",
-        tertiary: "#F5F4F1",
+        tertiary: "rgba(227, 181, 119, .1)",
       },
     },
   },

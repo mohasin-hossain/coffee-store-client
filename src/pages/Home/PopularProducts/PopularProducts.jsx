@@ -3,6 +3,8 @@ import Swal from "sweetalert2";
 import ProductCard from "../ProductCard/ProductCard";
 import { BsCup } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import productListBgLeft from "../../../assets/more/4.png";
+import productListBgRight from "../../../assets/more/5.png";
 
 const PopularProducts = () => {
   const [products, setProducts] = useState([]);
@@ -47,8 +49,8 @@ const PopularProducts = () => {
   };
 
   return (
-    <div className="container mx-auto px-10 mt-20">
-      <div>
+    <div className="px-10 mt-20 relative">
+      <div className="container mx-auto">
         <p className="font-rancho text-center text-xl">-- Sip & Savor --</p>
         <h2
           style={{ textShadow: "0px 1px 8px #818181" }}
@@ -68,7 +70,7 @@ const PopularProducts = () => {
           </Link>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 mt-10">
+        <div className="grid lg:grid-cols-2 gap-8 mt-10 relative">
           {products.map((product) => (
             <ProductCard
               key={product._id}
@@ -78,6 +80,8 @@ const PopularProducts = () => {
           ))}
         </div>
       </div>
+      <img className="absolute left-0 top-0" src={productListBgLeft} alt="" />
+      <img className="absolute right-0 bottom-0" src={productListBgRight} alt="" />
     </div>
   );
 };

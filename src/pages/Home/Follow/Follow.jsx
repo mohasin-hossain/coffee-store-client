@@ -7,11 +7,10 @@ import coffee6 from "../../../assets/cups/Rectangle 14.png";
 import coffee7 from "../../../assets/cups/Rectangle 15.png";
 import coffee8 from "../../../assets/cups/Rectangle 10.png";
 
-
 const Follow = () => {
   return (
-    <div className="container mx-auto px-10 py-20">
-      <div>
+    <div>
+      <div className="container mx-auto px-10 py-20">
         <p className="font-rancho text-center text-xl">-- Follow us Now --</p>
         <h2
           style={{ textShadow: "0px 1px 8px #818181" }}
