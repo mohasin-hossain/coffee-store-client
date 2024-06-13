@@ -29,7 +29,7 @@ const UpdateCoffee = () => {
     };
 
     // Send data to the server
-    fetch(`https://coffee-store-server-opbz37q6z-md-mohasin-hossains-projects.vercel.app/coffee/${_id}`, {
+    fetch(`http://localhost:3000/coffee/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
