@@ -17,9 +17,12 @@ const Users = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://coffee-store-server-elksww2x2-md-mohasin-hossains-projects.vercel.app/users/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://coffee-store-server-7on2nx692-md-mohasin-hossains-projects.vercel.app/users/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {

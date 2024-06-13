@@ -24,12 +24,12 @@ const routes = createBrowserRouter([
         path: "/updateCoffee/:id",
         element: <UpdateCoffee></UpdateCoffee>,
         loader: ({ params }) =>
-          fetch(`https://coffee-store-server-elksww2x2-md-mohasin-hossains-projects.vercel.app/coffee/${params.id}`),
+          fetch(`https://coffee-store-server-7on2nx692-md-mohasin-hossains-projects.vercel.app/coffee/${params.id}`),
       },
       {
         path: "/users",
         element: <Users></Users>,
-        loader: () => fetch("https://coffee-store-server-elksww2x2-md-mohasin-hossains-projects.vercel.app/users"),
+        loader: () => fetch("https://coffee-store-server-7on2nx692-md-mohasin-hossains-projects.vercel.app/users"),
       },
       {
         path: "/login",
