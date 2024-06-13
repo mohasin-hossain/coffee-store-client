@@ -19,32 +19,68 @@ const Follow = () => {
           Follow on Instagram
         </h2>
         <div className="grid grid-cols-4 gap-2 max-w-5xl mx-auto">
-          <div>
-            <img src={coffee1} alt="Coffe" />
+          <div className="overflow-hidden rounded-lg">
+            <img
+              className="hover:scale-110 cursor-pointer duration-200"
+              src={coffee1}
+              alt="Coffe"
+            />
           </div>
-          <div className="col-span-2 row-span-2">
-            <img className="w-full" src={coffee2} alt="Coffe" />
+          <div className="col-span-2 row-span-2 overflow-hidden rounded-3xl">
+            <img
+              className="w-full hover:scale-110 cursor-pointer duration-200"
+              src={coffee2}
+              alt="Coffe"
+            />
           </div>
-          <div>
-            <img src={coffee3} alt="Coffe" />
+          <div className="overflow-hidden rounded-lg">
+            <img
+              className="hover:scale-110 cursor-pointer duration-200"
+              src={coffee3}
+              alt="Coffe"
+            />
           </div>
-          <div>
-            <img src={coffee4} alt="Coffe" />
+          <div className="overflow-hidden rounded-lg">
+            <img
+              className="hover:scale-110 cursor-pointer duration-200"
+              src={coffee4}
+              alt="Coffe"
+            />
           </div>
-          <div>
-            <img src={coffee5} alt="Coffe" />
+          <div className="overflow-hidden rounded-lg">
+            <img
+              className="hover:scale-110 cursor-pointer duration-200"
+              src={coffee5}
+              alt="Coffe"
+            />
           </div>
-          <div>
-            <img src={coffee6} alt="Coffe" />
+          <div className="overflow-hidden rounded-lg">
+            <img
+              className="hover:scale-110 cursor-pointer duration-200"
+              src={coffee6}
+              alt="Coffe"
+            />
           </div>
-          <div>
-            <img src={coffee7} alt="Coffe" />
+          <div className="overflow-hidden rounded-lg">
+            <img
+              className="hover:scale-110 cursor-pointer duration-200"
+              src={coffee7}
+              alt="Coffe"
+            />
           </div>
-          <div>
-            <img src={coffee8} alt="Coffe" />
+          <div className="overflow-hidden rounded-lg">
+            <img
+              className="hover:scale-110 cursor-pointer duration-200"
+              src={coffee8}
+              alt="Coffe"
+            />
           </div>
-          <div>
-            <img src={coffee4} alt="Coffe" />
+          <div className="overflow-hidden rounded-lg">
+            <img
+              className="hover:scale-110 cursor-pointer duration-200"
+              src={coffee4}
+              alt="Coffe"
+            />
           </div>
         </div>
       </div>
