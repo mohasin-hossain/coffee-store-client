@@ -17,6 +17,7 @@ export default {
         primary: "#E3B577",
         secondary: "#331A15",
         tertiary: "rgba(227, 181, 119, .1)",
+        quaternary: "#F4F3F0",
       },
     },
   },

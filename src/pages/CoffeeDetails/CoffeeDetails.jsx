@@ -29,7 +29,7 @@ const CoffeeDetails = () => {
           </div>
           <div className="w-4/5 p-8 ">
             <div className="space-y-2">
-              <h3 className="font-rancho text-4xl">{name}</h3>
+              <h3  style={{ textShadow: "0px 1px 8px #818181" }} className="font-rancho text-4xl">{name}</h3>
               <p>
                 <strong>In Stock: </strong>
                 {quantity}
