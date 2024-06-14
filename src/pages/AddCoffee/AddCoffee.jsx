@@ -53,8 +53,9 @@ const AddCoffee = () => {
   };
 
   return (
-    <div className="container mx-auto mt-10 mb-20 px-10">
-      <button
+    <div className="bg-form-img mt-10 mb-20">
+   <div className="container mx-auto px-10">
+   <button
         style={{ textShadow: "0px 1px 8px #818181" }}
         className="mt-20 mb-8 font-rancho text-3xl flex items-center gap-3"
         onClick={handleGoBack}
@@ -173,6 +174,7 @@ const AddCoffee = () => {
           className="btn btn-outline rounded-none bg-primary border-black border-2 font-rancho text-xl mt-10"
         />
       </form>
+   </div>
     </div>
   );
 };

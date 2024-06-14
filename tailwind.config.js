@@ -6,6 +6,7 @@ export default {
       backgroundImage: {
         "header-img": "url(./src/assets/more/15.jpg)",
         "banner-img": "url(./src/assets/more/3.png)",
+        "form-img": "url(./src/assets/more/11.png)",
         "footer-img": "url(./src/assets/more/13.jpg)",
         "footer-copyright-img": "url(./src/assets/more/24.jpg)",
       },

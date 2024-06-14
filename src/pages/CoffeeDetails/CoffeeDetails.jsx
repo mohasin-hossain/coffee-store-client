@@ -12,7 +12,7 @@ const CoffeeDetails = () => {
   };
 
   return (
-    <div>
+    <div className="bg-form-img">
       <div className="container mx-auto px-10">
         <button
           style={{ textShadow: "0px 1px 8px #818181" }}
