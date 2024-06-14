@@ -52,7 +52,7 @@ const Register = () => {
       </button>
       <form
         onSubmit={handleRegister}
-        className="card-body w-1/2 mx-auto bg-quaternary"
+        className="card-body lg:w-1/2 mx-auto bg-quaternary"
       >
         <h1
           style={{ textShadow: "0px 1px 8px #818181" }}

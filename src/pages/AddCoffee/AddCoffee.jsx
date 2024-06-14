@@ -65,7 +65,7 @@ const AddCoffee = () => {
 
       <form
         onSubmit={handleAddCoffee}
-        className="card-body bg-quaternary mt-8 px-28 py-16"
+        className="card-body bg-quaternary mt-8 md:px-28 md:py-16"
       >
         <h1
           style={{ textShadow: "0px 1px 8px #818181" }}
@@ -83,7 +83,7 @@ const AddCoffee = () => {
               type="text"
               name="name"
               placeholder="Enter Coffee Name"
-              className="input text-gray-500"
+              className="input text-gray-500 border-4"
               required
             />
           </div>

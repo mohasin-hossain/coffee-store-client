@@ -8,7 +8,7 @@ const CoffeeDetails = () => {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
-    navigate(-1);
+    navigate('/');
   };
 
   return (
@@ -23,11 +23,11 @@ const CoffeeDetails = () => {
           Back to Home
         </button>
 
-        <div className="font-raleway flex justify-center items-center bg-tertiary mb-20">
-          <div className="w-1/5">
+        <div className="font-raleway flex flex-col lg:flex-row justify-center items-center bg-tertiary mb-20">
+          <div className="lg:w-1/5">
             <img className="w-96 mx-auto" src={photo} alt="coffee" />
           </div>
-          <div className="w-4/5 p-8 ">
+          <div className="lg:w-4/5 p-8 ">
             <div className="space-y-2">
               <h3  style={{ textShadow: "0px 1px 8px #818181" }} className="font-rancho text-4xl">{name}</h3>
               <p>

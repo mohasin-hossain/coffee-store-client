@@ -68,7 +68,7 @@ const UpdateCoffee = () => {
 
       <form
         onSubmit={handleUpdateCoffee}
-        className="card-body bg-quaternary mt-8 px-28 py-16"
+        className="card-body bg-quaternary mt-8 md:px-28 md:py-16"
       >
         <h1
           style={{ textShadow: "0px 1px 8px #818181" }}
